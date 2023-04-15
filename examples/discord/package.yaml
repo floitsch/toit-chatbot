@@ -1,0 +1,9 @@
+dependencies:
+  chatbot:
+    path: ../..
+  discord:
+    url: github.com/floitsch/toit-discord
+    version: ^0.2.0
+  host:
+    url: github.com/toitlang/pkg-host
+    version: ^1.9.0

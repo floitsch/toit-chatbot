@@ -1,6 +1,17 @@
+sdk: ^2.0.0-alpha.64
 prefixes:
-  openai: toit-openai
+  chatbot: ..
+  host: pkg-host
+  telegram: toit-telegram
 packages:
+  ..:
+    path: ../..
+    prefixes:
+      openai: toit-openai
+  pkg-host:
+    url: github.com/toitlang/pkg-host
+    version: 1.9.0
+    hash: 76e4dc5328a5c3739e97f65ed196d05058071359
   pkg-http:
     url: github.com/toitlang/pkg-http
     version: 2.1.0
@@ -13,6 +24,13 @@ packages:
     url: github.com/toitware/toit-openai
     version: 0.1.0
     hash: a4fe0353b2491779f59263dd089e091c7dc9db8d
+    prefixes:
+      certificate_roots: toit-cert-roots
+      http: pkg-http
+  toit-telegram:
+    url: github.com/floitsch/toit-telegram
+    version: 0.1.1
+    hash: bba181f8f05a8bd76be6b7b7f842bfec2f8098e7
     prefixes:
       certificate_roots: toit-cert-roots
       http: pkg-http
